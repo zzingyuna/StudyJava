@@ -1,29 +1,34 @@
-plugins {
-    id 'org.springframework.boot' version '2.5.0'
-    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
-    id 'java'
+buildscript {
+    ext {
+//        전역변수 설정
+        springBootVersion = '2.1.7.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
 }
 
-group 'com.example'
-version '1.0-SNAPSHOT'
-sourceCompatibility = '16'
+//플러그인 의존성들 적용
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management' // 스프링부트의 의존성을 관리해주는 플러그인
 
+group 'com.exaple.springboot'
+version '1.0-SNAPSHOT'
+sourceCompatibility = 1.8
+
+// 의존성들을 어떤 원격 저장소에서 받을지 지정
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-    implementation 'org.springframework.boot:spring-boot-starter-mustache'
-    implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
-    compileOnly 'org.projectlombok:lombok'
-    developmentOnly 'org.springframework.boot:spring-boot-devtools'
-    runtimeOnly 'mysql:mysql-connector-java'
-    annotationProcessor 'org.projectlombok:lombok'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
-}
-
-test {
-    useJUnitPlatform()
+    compile("org.springframework.boot:spring-boot-starter-web")
+    compile("org.projectlombok:lombok")
+    testCompile("org.springframework.boot:spring-boot-starter-test")
 }
