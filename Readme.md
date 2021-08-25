@@ -10,3 +10,8 @@ open jdk 16
 Gradle Version 7.0.2  
 https://gradle.org/install/  
 (setting에서 gradle 외부폴더 참조로 변경함)  
+
+
+error: variable name not initialized in the default constructor  
+[https://github.com/jojoldu/freelec-springboot2-webservice/issues/2](https://github.com/jojoldu/freelec-springboot2-webservice/issues/2)  
+
