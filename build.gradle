@@ -18,9 +18,11 @@ apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management' // 스프링부트의 의존성을 관리해주는 플러그인
 
+
 group 'com.exaple.springboot'
 version '1.0-SNAPSHOT'
 sourceCompatibility = 1.8
+
 
 // 의존성들을 어떤 원격 저장소에서 받을지 지정
 repositories {
