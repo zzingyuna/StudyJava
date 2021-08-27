@@ -15,3 +15,8 @@ https://gradle.org/install/
 error: variable name not initialized in the default constructor  
 [https://github.com/jojoldu/freelec-springboot2-webservice/issues/2](https://github.com/jojoldu/freelec-springboot2-webservice/issues/2)  
 
+
+데이터 확인  
+[http://localhost:8080/h2-console](http://localhost:8080/h2-console)
+JDBC URL값을 아래와 같이 변경  
+jdbc:h2:mem:testdb
