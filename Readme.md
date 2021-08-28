@@ -17,6 +17,13 @@ error: variable name not initialized in the default constructor
 
 
 데이터 확인  
-[http://localhost:8080/h2-console](http://localhost:8080/h2-console)
+[http://localhost:8080/h2-console](http://localhost:8080/h2-console)  
 JDBC URL값을 아래와 같이 변경  
-jdbc:h2:mem:testdb
+jdbc:h2:mem:testdb  
+
+
+resources/application-oauth.properties 파일 생성, 아래 내용 입력  
+> spring.security.oauth2.client.registration.google.client-id=클라이언트id  
+> spring.security.oauth2.client.registration.google.client-secret=클라이언트 보안비밀  
+> spring.security.oauth2.client.registration.google.scope=profile,email  
+
